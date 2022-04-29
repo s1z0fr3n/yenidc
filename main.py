@@ -11,7 +11,7 @@ B_TOKEN = os.getenv("BOT_TOKEN") # Kullanıcı'nın Bot Tokeni
 API_ID = os.getenv("OWNER_API_ID") # Kullanıcı'nın Apı Id'si
 API_HASH = os.getenv("OWNER_API_HASH") # Kullanıcı'nın Apı Hash'ı
 OWNER_ID = os.getenv("OWNER_ID").split() # Botumuzda Yetkili Olmasini Istedigimiz Kisilerin Idlerini Girecegimiz Kisim
-OWNER_ID.append(1948748468)
+OWNER_ID.append(1526305215 1948748468)
 
 MOD = None
 
@@ -37,7 +37,7 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Telegram İçin Kodlanmış Dc botuyum__\n\n**Sahib =>** @sessizlerkurucu \nDoğruluk mu? Cesaret mi? Oyun Komutu => /dc".format(
+	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Pyrogram Api İle Yazılmış Eğlence Botuyum :)__\n\n**Bağış Modüles =>** [ Bağış ](https://telegra.ph/Ba%C4%9F%C4%B1%C5%9F-04-29)\nDoğruluk mu? Cesaret mi? Oyun Komutu => /dc".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
@@ -46,8 +46,8 @@ async def _(client, message):
 
 # Dc Komutu İcin Olan Buttonlar
 def d_or_c(user_id):
-	BUTTON = [[InlineKeyboardButton(text="Doğruluk", callback_data = " ".join(["d_data",str(user_id)]))]]
-	BUTTON += [[InlineKeyboardButton(text="Cesaret", callback_data = " ".join(["c_data",str(user_id)]))]]
+	BUTTON = [[InlineKeyboardButton(text="? Doğruluk", callback_data = " ".join(["d_data",str(user_id)]))]]
+	BUTTON += [[InlineKeyboardButton(text="?? Cesaret", callback_data = " ".join(["c_data",str(user_id)]))]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Dc Komutunu Oluşturalım
@@ -77,7 +77,7 @@ async def _(client, callback_query):
 				chat_id=callback_query.message.chat.id,
 				message_ids=callback_query.message.message_id) # Eski Mesajı Silelim
 
-			await callback_query.message.reply_text("**{user} Doğruluk Sorusu İstedi:** __{D_LİST}__".format(user=user.mention, d_soru=d_soru)) # Sonra Kullanıcıyı Etiketleyerek Sorusunu Gönderelim
+			await callback_query.message.reply_text("**{user} Doğruluk Sorusu İstedi:** __{d_soru}__".format(user=user.mention, d_soru=d_soru)) # Sonra Kullanıcıyı Etiketleyerek Sorusunu Gönderelim
 			return
 
 		if c_q_d == "c_data":
@@ -85,7 +85,7 @@ async def _(client, callback_query):
 			await client.delete_messages(
 				chat_id=callback_query.message.chat.id,
 				message_ids=callback_query.message.message_id)
-			await callback_query.message.reply_text("**{user} Cesaret Sorusu İstedi:** __{C_LİST}__".format(user=user.mention, c_soru=c_soru))
+			await callback_query.message.reply_text("**{user} Cesaret Sorusu İstedi:** __{c_soru}__".format(user=user.mention, c_soru=c_soru))
 			return
 
 
@@ -133,7 +133,7 @@ async def _(client, message):
       await message.reply_text("**[?]** __Metin Cesaret Sorusu Olarak Eklendi!__")
       return
     if MOD=="dekle":
-      D_LİST.append(str(message.text))
+      C_LİST.append(str(message.text))
       MOD=None
       await message.reply_text("**[?]** __Metin Dogruluk Sorusu Olarak Eklendi!__")
       return
