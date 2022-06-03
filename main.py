@@ -2,7 +2,7 @@
 import os
 import logging
 import random
-from sorular import D_LİST, C_LİST
+from sorular import D_SORU, C_SORU
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # ============================ #
@@ -62,8 +62,8 @@ async def _(client, message):
 # Buttonlarımızı Yetkilendirelim
 @K_G.on_callback_query()
 async def _(client, callback_query):
-	d_soru=random.choice(D_LİST) # Random Bir Doğruluk Sorusu Seçelim
-	c_soru=random.choice(C_LİST) # Random Bir Cesaret Sorusu Seçelim
+	d_soru=random.choice(D_SORU) # Random Bir Doğruluk Sorusu Seçelim
+	c_soru=random.choice(C_SORU) # Random Bir Cesaret Sorusu Seçelim
 	user = callback_query.from_user # Kullanıcın Kimliğini Alalım
 
 	c_q_d, user_id = callback_query.data.split() # Buttonlarımızın Komutlarını Alalım
@@ -121,19 +121,19 @@ async def _(client, message):
 @K_G.on_message(filters.private)
 async def _(client, message):
   global MOD
-  global C_LİST
-  global D_LİST
+  global C_SORU
+  global D_SORU
   
   user = message.from_user
   
   if user.id in OWNER_ID:
     if MOD=="cekle":
-      C_LİST.append(str(message.text))
+      C_SORU.append(str(message.text))
       MOD=None
       await message.reply_text("**[?]** __Metin Cesaret Sorusu Olarak Eklendi!__")
       return
     if MOD=="dekle":
-      C_LİST.append(str(message.text))
+      C_SORU.append(str(message.text))
       MOD=None
       await message.reply_text("**[?]** __Metin Dogruluk Sorusu Olarak Eklendi!__")
       return
