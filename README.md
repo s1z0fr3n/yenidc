@@ -1,7 +1,4 @@
-<img src="https://i.hizliresim.com/h2uyn65.png" width="300" height="300">
-
-
-Telegramda Eğlence Amaçlı Grublarınızda DC Oyun Botuyum
+### Telegramda Eğlence Amaçlı Grublarınızda DC Oyun Botuyum
 
 # Heroku'da Clonlamak
 
