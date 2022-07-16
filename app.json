@@ -1,7 +1,7 @@
 {
   "name": "Tg Eğlence Bot",
   "description": "Pyrogram İle Yazılmış Bir Eğlence Botu",
-  "repository": "https://github.com/SakirBey1/dcbot.git",
+  "repository": "https://github.com/Alfa00006/Dcbot",
   "logo": "https://i.hizliresim.com/h2uyn65.png",
   "keywords": ["telegram", "game", "pyrogram","telegram bot"],
   "env": {
