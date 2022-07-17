@@ -4,4 +4,4 @@ RUN python3.9 -m pip install -U pip
 COPY . /app
 WORKDIR /app
 RUN python3.9 -m pip install -U -r requirements.txt
-CMD ["bash", "mahoaga"]
+CMD python3 main.py 
