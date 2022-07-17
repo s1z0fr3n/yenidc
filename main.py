@@ -23,8 +23,8 @@ logging.basicConfig(level=logging.INFO)
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
-	BUTTON=[[InlineKeyboardButton(text="Sahibim ",url="t.me/sessizlerkurucu")]]
-	BUTTON+=[[InlineKeyboardButton(text="Bağış",url="https://telegra.ph/Ba%C4%9F%C4%B1%C5%9F-04-29")]]
+	BUTTON=[[InlineKeyboardButton(text="🇹🇷 Owner",url="t.me/Mahoaga")]]
+	BUTTON+=[[InlineKeyboardButton(text="📣 Kanal",url="https://t.me/TaliaSupport")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Kullanıcı Start Komutunu Kullanınca Selam'layalım :)
@@ -32,7 +32,7 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Pyrogram Api İle Yazılmış Eğlence Botuyum :)__\n\n**Bağış Modüles =>** [ Bağış ](https://telegra.ph/Ba%C4%9F%C4%B1%C5%9F-04-29)\nDoğruluk mu? Cesaret mi? Oyun Komutu => /dc".format(
+	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Pyrogram Api İle Yazılmış Eğlence Botuyum :)__\n\n**📣 Kanalıma Katılın =>** [ Bağış ](https://t.me/TaliaSupport)\nDoğruluk mu? Cesaret mi? Oyun Komutu => /dc".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
