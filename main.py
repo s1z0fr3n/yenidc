@@ -1,30 +1,25 @@
 # Gerekli Kurulumlar
 import os
 import logging
+from config import *
 import random
 from sorular import D_SORU, C_SORU
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # ============================ #
 
-B_TOKEN = os.getenv("BOT_TOKEN") # Kullanıcı'nın Bot Tokeni
-API_ID = os.getenv("OWNER_API_ID") # Kullanıcı'nın Apı Id'si
-API_HASH = os.getenv("OWNER_API_HASH") # Kullanıcı'nın Apı Hash'ı
-OWNER_ID = os.getenv("OWNER_ID").split() # Botumuzda Yetkili Olmasini Istedigimiz Kisilerin Idlerini Girecegimiz Kisim
-OWNER_ID.append(1526305215)
+K_G = Client(
+  "bot",
+  api_id=API_ID,
+  api_hash=API_HASH,
+  bot_token=BOT_TOKEN
+)
 
 MOD = None
 
 # Log Kaydı Alalım
 logging.basicConfig(level=logging.INFO)
 
-# Komutlar İcin Botu Tanıtma
-K_G = Client(
-	"Pyrogram Bot",
-	bot_token=B_TOKEN,
-	api_id=API_ID,
-	api_hash=API_HASH
-	)
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
