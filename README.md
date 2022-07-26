@@ -2,7 +2,7 @@
 
 # Heroku'da Clonlamak
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kakkurt947/mehemeh)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/s1z0fr3n/yenidc)
 
 <h4>🔺 Okteto ile Kurulum 🔻</h4> 
 
