@@ -23,7 +23,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
-	BUTTON=[[InlineKeyboardButton(text=" Owner",url="t.me/ekipci")]]
+	BUTTON=[[InlineKeyboardButton(text=" Owner",url="t.me/ekiplider")]]
 	BUTTON+=[[InlineKeyboardButton(text="📣 Kanal",url="https://t.me/ekipbotdestek")]]
 	return InlineKeyboardMarkup(BUTTON)
 
