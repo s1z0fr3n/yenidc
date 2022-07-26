@@ -23,8 +23,8 @@ logging.basicConfig(level=logging.INFO)
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
-	BUTTON=[[InlineKeyboardButton(text=" Owner",url="t.me/tommy47shelby")]]
-	BUTTON+=[[InlineKeyboardButton(text="📣 Kanal",url="https://t.me/tutkudestek")]]
+	BUTTON=[[InlineKeyboardButton(text=" Owner",url="t.me/ekipci")]]
+	BUTTON+=[[InlineKeyboardButton(text="📣 Kanal",url="https://t.me/ekipbotdestek")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Kullanıcı Start Komutunu Kullanınca Selam'layalım :)
